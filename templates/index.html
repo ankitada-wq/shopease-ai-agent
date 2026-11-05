@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase | Online Shopping</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h2 class="logo">ShopEase.</h2>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <button class="cart">🛒 Cart</button>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="tagline">YOUR EVERYDAY SHOPPING DESTINATION</p>
+
+            <h1>Everything You Need.<br>All in One Place.</h1>
+
+            <p>
+                Discover electronics, fashion and home essentials
+                at amazing prices.
+            </p>
+
+            <a href="#products" class="shop-btn">Explore Products →</a>
+        </div>
+    </section>
+
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>Explore Categories</h2>
+
+        <div class="category-container">
+            <div class="category-card">💻<h3>Electronics</h3></div>
+            <div class="category-card">👕<h3>Fashion</h3></div>
+            <div class="category-card">🏠<h3>Home Essentials</h3></div>
+        </div>
+    </section>
+
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <h2>Popular Products</h2>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <div class="product-image">🎧</div>
+                <h3>Wireless Headphones</h3>
+                <p>₹1,499</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <h3>Smart Watch</h3>
+                <p>₹2,499</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🎒</div>
+                <h3>Laptop Backpack</h3>
+                <p>₹899</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">💡</div>
+                <h3>Desk Lamp</h3>
+                <p>₹799</p>
+                <button>Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About ShopEase</h2>
+
+        <p>
+            ShopEase is an online shopping platform founded in 2022.
+            We bring electronics, fashion and home essentials
+            together in one convenient shopping destination.
+        </p>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h3>ShopEase.</h3>
+        <p>Customer Support: support@shopease.demo</p>
+        <p>Monday–Saturday | 9 AM–6 PM</p>
+        <p>© 2026 ShopEase. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Chatbot Toggle -->
+    <button id="chat-toggle" class="chat-toggle">💬</button>
+
+
+    <!-- Chatbot Window -->
+    <div id="chat-window" class="chat-window">
+
+        <div class="chat-header">
+            <div>
+                <h3>ShopEase Assistant</h3>
+                <small>● AI Customer Support</small>
+            </div>
+
+            <button id="close-chat">×</button>
+        </div>
+<div id="chat-messages" class="chat-messages">
+    <div class="bot-message">
+        Hi! Welcome to ShopEase 👋
+        I'm your AI shopping assistant.
+        How can I help you today?
+    </div>
+</div>
+
+<div class="quick-replies">
+    <button onclick="sendQuickReply('Track my order')">📦 Track my order</button>
+    <button onclick="sendQuickReply('What is your return policy?')">↩️ Return policy</button>
+    <button onclick="sendQuickReply('What payment methods do you accept?')">💳 Payment methods</button>
+<button onclick="sendQuickReply('Can you recommend some products?')">🎁 Product recommendations</button></div>
+
+        <div class="chat-input">
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Ask about ShopEase..."
+            >
+
+            <button id="send-btn">➤</button>
+        </div>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

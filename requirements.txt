@@ -1,7 +1,5 @@
-@"
 flask
 google-genai
 python-dotenv
 scikit-learn
-gunicorn==23.0.0
-"@ | Set-Content requirements.txt
+gunicorn
